@@ -278,6 +278,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         // Reassert ordering after switching apps or Spaces without taking focus.
         isPresent = true
         panel.alphaValue = 1
+        // Space switches can change the usable top edge on the same display.
+        panel.placeOnScreen(panel.screen)
         panel.orderFrontRegardless()
     }
 
@@ -293,6 +295,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     private func reveal(pinned: Bool = false, peekFor seconds: TimeInterval = 0) {
         guard isPresent else { return }
+        panel.orderFrontRegardless()
         if pinned { self.pinned = true }
         if seconds > 0 { peekUntil = Date().addingTimeInterval(seconds) }
         awaySince = nil

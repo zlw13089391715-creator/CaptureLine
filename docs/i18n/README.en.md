@@ -42,6 +42,6 @@ The script can fall back to an installed macOS 26 SDK; `SDKROOT` can select a co
 
 SwiftPM's internal module and source paths retain `Tendedero`; the app uses a separate name, executable, icon and bundle identifier.
 
-Media integration checks, translation checks and universal builds passed. Actual system recording and direct inbox saving were verified. Version 1.0.4's cross-app/full-screen settings compile, but actual behavior in individual apps and macOS versions still needs UI verification. The deployment target does not mean every supported OS has been tested.
+Media integration checks, translation checks and universal builds passed. Actual system recording and direct inbox saving were verified. Version 1.0.5 fixes full-screen visibility. The user verified Desktop and full-screen revealing on the test Mac; other apps, Stage Manager and macOS versions still need verification. The deployment target does not mean every supported OS has been tested.
 
 See [CHANGELOG.md](../../CHANGELOG.md). Code retains the upstream MIT license and copyright. Tendedero's name and icon are excluded from its license; CaptureLine uses its own name and icon and does not redistribute upstream promotional artwork.

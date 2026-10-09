@@ -36,6 +36,6 @@ Coloca CaptureLine.app en Aplicaciones, cierra Tendedero o una instancia anterio
 
 La carpeta es `~/Library/Application Support/CaptureLine/Screenshots`, también para vídeos. La cuerda usa ese archivo sin duplicarlo. La cruz envía los elementos internos a la Papelera; retirar archivos externos conserva sus originales. El menú contextual permite mostrar en Finder o guardar en el Escritorio. Los vídeos normales del Escritorio no se recogen automáticamente; puedes añadir grabaciones existentes desde el menú.
 
-Las comprobaciones de medios, traducciones y compilación universal pasaron. Se verificó la grabación del sistema y el guardado directo en la carpeta interna. Los ajustes de pantalla completa de 1.0.4 compilan, pero requieren más verificación real en distintas aplicaciones y versiones de macOS.
+Las comprobaciones de medios, traducciones y compilación universal pasaron. Se verificó la grabación del sistema y el guardado directo en la carpeta interna. La versión 1.0.5 corrige la visibilidad en pantalla completa. El usuario confirmó el despliegue en el Escritorio y una app a pantalla completa en el Mac de prueba; otras apps, Organizador Visual y versiones de macOS requieren más verificación.
 
 El módulo SwiftPM conserva `Tendedero`; la aplicación usa nombre, icono e identificador propios. Se conserva la licencia MIT y el copyright original. El nombre e icono de Tendedero no están incluidos en esa licencia y no se redistribuyen sus imágenes promocionales. Cambios: [CHANGELOG.md](../../CHANGELOG.md).

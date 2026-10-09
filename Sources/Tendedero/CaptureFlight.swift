@@ -88,7 +88,9 @@ final class CaptureFlight {
         window.backgroundColor = .clear
         window.hasShadow = false
         window.ignoresMouseEvents = true
-        window.level = NSWindow.Level(rawValue: NSWindow.Level.floating.rawValue + 1)
+        (window as? NSPanel)?.isFloatingPanel = true
+        window.hidesOnDeactivate = false
+        window.level = NSWindow.Level(rawValue: NSWindow.Level.statusBar.rawValue + 1)
         window.collectionBehavior = [.canJoinAllSpaces, .canJoinAllApplications, .fullScreenAuxiliary, .stationary, .ignoresCycle]
 
         let host = NSView(frame: NSRect(origin: .zero, size: screen.frame.size))

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.5
+
+- Raise the clothesline and animation panels to the status overlay tier and mark them as floating panels.
+- Refresh placement when reordering after application or Space changes.
+- Reassert window ordering when revealing via the shortcut or the top edge.
+- Universal build and signature checks passed. The user verified that revealing the line works on the Desktop and over a full-screen app on the test Mac; other app/OS combinations remain to be checked.
+
 ## 1.0.4
 
 - Allow the clothesline and capture animations to join other applications, full-screen Spaces and Stage Manager.

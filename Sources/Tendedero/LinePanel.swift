@@ -10,13 +10,17 @@ final class LinePanel: NSPanel {
         isOpaque = false
         backgroundColor = .clear
         hasShadow = false
-        level = .floating
+        isFloatingPanel = true
+        // A floating-level panel can sit below a full-screen app. Use the
+        // status overlay tier, below popup menus, without taking focus.
+        level = .statusBar
         // Join other apps in full screen and Stage Manager as a nonactivating overlay.
         collectionBehavior = [.canJoinAllSpaces, .canJoinAllApplications,
                               .fullScreenAuxiliary, .stationary, .ignoresCycle]
         hidesOnDeactivate = false
         isMovable = false
         becomesKeyOnlyIfNeeded = true
+        worksWhenModal = true
         ignoresMouseEvents = true
         contentView = content
     }
