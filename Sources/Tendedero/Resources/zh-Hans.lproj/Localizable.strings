@@ -1,0 +1,41 @@
+/* Chinese (Simplified). */
+
+/* AppDelegate */
+"Let CaptureLine handle your screenshots and recordings?" = "让 CaptureLine 接管截图和录屏？";
+"Screenshots will skip the Desktop. Completed desktop recordings will move into CaptureLine's folder. Drag a capture to a folder to keep it, or discard it with the cross. You can turn this off from the menu bar; your screenshot settings come back when CaptureLine quits." = "截图不再保存到桌面；桌面的新录屏保存完成后会移入 CaptureLine 的收纳目录。拖进文件夹即可保留，点叉即可丢弃。随时可以从菜单栏关闭，退出 CaptureLine 后截图设置会还原。";
+"Turn on" = "开启";
+"Not now" = "以后再说";
+"Hide line" = "隐藏晾衣绳";
+"Show line" = "显示晾衣绳";
+"Take everything down" = "全部取下";
+"Open screenshots folder" = "打开截图文件夹";
+"Sounds" = "声音";
+"Open at login" = "登录时打开";
+"Quit CaptureLine" = "退出 CaptureLine";
+"Could not change the login setting" = "无法更改登录项设置";
+"Move CaptureLine to the Applications folder and try again." = "请先把 CaptureLine 移到「应用程序」文件夹，再试一次。";
+
+/* GrabArea */
+"Copy" = "复制";
+"Open" = "打开";
+"Markup" = "标记";
+"Show in Finder" = "在访达中显示";
+"Save to Desktop" = "存储到桌面";
+"Discard" = "丢弃";
+"Take down" = "取下";
+"Move to Trash" = "移到废纸篓";
+
+/* LineView */
+
+/* PeggedView */
+"Copied" = "已复制";
+
+/* Screen recordings */
+"Video" = "视频";
+"Open recordings folder" = "打开录屏文件夹";
+"Take a screenshot or recording and it will hang here" = "截个图或录个屏，它就会挂在这里";
+"Add recording…" = "添加录屏…";
+"Handle screenshots and recordings" = "接管截图和录屏";
+"Screenshots and recordings stay on the line and off the Desktop" = "截图和录屏收纳到晾衣绳，桌面不留文件";
+"Could not collect recording" = "无法收纳录屏";
+"The video stays in its original folder and can still be opened from the line." = "视频仍保留在原文件夹中，可以从晾衣绳打开。";

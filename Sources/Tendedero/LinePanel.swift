@@ -1,0 +1,41 @@
+import AppKit
+
+/// A transparent strip along the top of the screen that floats over every
+/// app and every Space, including full-screen apps, never takes focus, and lets clicks pass through
+/// everywhere except over the photos.
+final class LinePanel: NSPanel {
+    init(content: NSView) {
+        super.init(contentRect: .zero, styleMask: [.borderless, .nonactivatingPanel],
+                   backing: .buffered, defer: false)
+        isOpaque = false
+        backgroundColor = .clear
+        hasShadow = false
+        level = .floating
+        // Join other apps in full screen and Stage Manager as a nonactivating overlay.
+        collectionBehavior = [.canJoinAllSpaces, .canJoinAllApplications,
+                              .fullScreenAuxiliary, .stationary, .ignoresCycle]
+        hidesOnDeactivate = false
+        isMovable = false
+        becomesKeyOnlyIfNeeded = true
+        ignoresMouseEvents = true
+        contentView = content
+    }
+
+    override var canBecomeKey: Bool { false }
+    override var canBecomeMain: Bool { false }
+
+    /// The line hangs on the screen you are using, which is the one with the
+    /// pointer: that is where you just took the screenshot.
+    static func screenUnderPointer() -> NSScreen? {
+        let mouse = NSEvent.mouseLocation
+        return NSScreen.screens.first { NSMouseInRect(mouse, $0.frame, false) }
+            ?? NSScreen.main ?? NSScreen.screens.first
+    }
+
+    func placeOnScreen(_ screen: NSScreen? = nil) {
+        guard let visible = (screen ?? LinePanel.screenUnderPointer())?.visibleFrame else { return }
+        let target = NSRect(x: visible.minX, y: visible.maxY - Layout.panelHeight,
+                            width: visible.width, height: Layout.panelHeight)
+        if frame != target { setFrame(target, display: true) }
+    }
+}
